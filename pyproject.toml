@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentduel-agents"
+version = "0.1.0"
+description = "Agent base classes and example agents for Agent Duel"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+openai = ["openai>=1.0.0,<2.0"]
+dev = ["pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["agentduel_agents*"]
+
+[tool.setuptools.package-data]
+agentduel_agents = ["examples/*.py"]
